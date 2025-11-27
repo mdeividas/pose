@@ -23,8 +23,8 @@ async function initPoseWeb(wasmPath, modelRelativePath) {
 }
 
 async function detectPoseWebForImage(elementId) {
-    const img = document.getElementById(elementId);
-    return poseLandmarker.detect(img);
+    const image = document.getElementById(elementId);
+    return poseLandmarker.detect(image);
 }
 
 async function detectPoseWebForVideo(elementId) {
@@ -33,5 +33,6 @@ async function detectPoseWebForVideo(elementId) {
 }
 
 window.initPoseWeb = initPoseWeb;
+window.setImageSrc = setImageSrc;
 window.detectPoseWebForImage = detectPoseWebForImage;
 window.detectPoseWebForVideo = detectPoseWebForVideo;

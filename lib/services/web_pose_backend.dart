@@ -26,9 +26,7 @@ class WebPoseBackend implements PoseBackend {
       await initialize();
     }
 
-    final result = await jsPose
-        .detectPoseWebForImage(image.id.toString().toJS)
-        .toDart;
+    final result = await jsPose.detectPoseWebForImage(image).toDart;
 
     if (result == null) {
       return [];
